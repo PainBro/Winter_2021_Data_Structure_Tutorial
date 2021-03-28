@@ -15,6 +15,8 @@ a linked list uses a pointer system, each value points to the value before it an
 
 ## Inserting/Removing with a Linked List
 
+To insert to a linked list you have to take your last value and point it to your new value, then you need to take the new value and point it to the previous value and the next value, or the very first value.
+
 
 ## linked Lists With Python
 
