@@ -16,8 +16,12 @@ This is probrably what most people think of with queues. The first item in the q
 ### Web Server Queue
 this queue is similar to grocery store queue in that the first item QUEUED, will be the first item DEQUEUED. Unlike a grocery store queue, this web server queue uses an intermediary to decide which items to queue first. like with a phone line, if you call you will be connected, but if someone calls 911, their call will take priority.
 
+![](https://github.com/PainBro/Winter_2021_Data_Structure_Tutorial/blob/main/Web%20Server%20Queue.png)
+
 ### Reader/Writer Queue
 Unlike a web server, or grocery store queues, this reader/writer queue is built to handle multiple items at the same time. By juggling the processes it seems like it is working on all of them at the same time
+
+![](https://github.com/PainBro/Winter_2021_Data_Structure_Tutorial/blob/main/Reader_writer%20Queue.png)
 
 ## Queues With Python
 In python queues are often done through a list.
