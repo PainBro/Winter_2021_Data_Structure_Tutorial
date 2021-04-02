@@ -44,7 +44,8 @@ these are some examples to help you get used to queues with python
 This python code is an example of what the Web server from earlier might look like.
 
 '''python
-class Priority_Queue:
+
+    class Priority_Queue:
 
     class Node:
 
@@ -85,3 +86,4 @@ class Priority_Queue:
             result += ", "
         result += "]"
         return result
+'''
