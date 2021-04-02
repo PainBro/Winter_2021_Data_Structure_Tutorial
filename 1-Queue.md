@@ -43,7 +43,7 @@ these are some examples to help you get used to queues with python
 
 This python code is an example of what the Web server from earlier might look like.
 
-'''python
+''' python
 
     class Priority_Queue:
 
@@ -87,3 +87,29 @@ This python code is an example of what the Web server from earlier might look li
         result += "]"
         return result
 '''
+
+## Problem 2
+
+For this problem try using the example code above to make a queue that will put any value of 911 first
+Use the test code below to test your work
+
+''' python
+# Test
+# Scenario: 911 should be put first no matter its priority
+# Expected Result: 911
+print("Test 1")
+pQue = Priority_Queue()
+pQue.enqueue('333-1124', 1)
+pQue.enqueue('911', 2)
+pQue.enqueue('407-6322', 3)
+print(pQue.dequeue())
+'''
+
+### Problem 2 Solution
+A possible solution to this problem would be to add this code into the enqueue function
+''' python
+if (value == '911'):
+            priority = 10
+'''
+
+## Problem 3
