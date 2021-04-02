@@ -33,11 +33,33 @@ these are some examples to help you get used to queues with python
 
 ## Example 1 
 
+This code is an example of a simple queue
+
+```python
+class Simple_Queue:
+
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, value):
+        self.queue.append(value)
+
+    def dequeue(self):
+        if len(self.queue) <= 0:
+            raise IndexError()
+        value = self.queue[0]
+        del self.queue[0]
+        return value
+```
 
 ## Problem 1
 
+Using the code above there is some code to raise an error in the dequeue function.
+What would you have do to make it raise the error?
+
 ### Problem 1 Solution
 
+To raise the error you would have to dequeue when there is nothing left in the queue
 
 ## Example 2
 
@@ -113,3 +135,13 @@ if (value == '911'):
 ```
 
 ## Problem 3
+
+Write python code to make a queue for someting in your life.
+Ex. A queue to keep trach of your homework assignments you need to do.
+
+### Problem 3 Solution
+
+Due to the nature of the problem there isn't one solution.
+If your queue works as you indended then it is correct.
+
+
