@@ -1,6 +1,6 @@
 # Queues
-{basic explaination of module}
 
+Queues are used in many programs and processes it is important to use queues in many situations. This tutorial will teach you some basics of queues.
 
 ## Basics of Queueing
 Queuing is essentially setting up a list of items to address. Depending on the type of queue items will be processed in order. Each item will be QUEUED, and DEQUEUED
