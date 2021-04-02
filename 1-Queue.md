@@ -41,9 +41,47 @@ these are some examples to help you get used to queues with python
 
 ## Example 2
 
+This python code is an example of what the Web server from earlier might look like.
 
-## Problem 2
+'''python
+class Priority_Queue:
 
-### Problem 2 Solution
+    class Node:
 
+        def __init__(self, value, priority):
+            self.value = value
+            self.priority = priority
 
+        def __str__(self):
+            return "{} (Pri:{})".format(self.value, self.priority)
+
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, value, priority):
+        new_node = Priority_Queue.Node(value, priority)
+        self.queue.append(new_node)
+
+    def dequeue(self):
+        if len(self.queue) == 0:  # Verify the queue is not empty
+            print("The queue is empty.")
+            return None
+        # Find the index of the item with the highest priority to remove
+        high_pri_index = 0
+        for index in range(1, len(self.queue)):
+            if self.queue[index].priority > self.queue[high_pri_index].priority:
+                high_pri_index = index
+        # Remove and return the item with the highest priority
+        value = self.queue.pop(high_pri_index).value 
+        return value
+        
+    def __len__(self):
+        return len(self.queue)
+
+    def __str__(self):
+        result = "["
+        for node in self.queue:
+            result += str(node)  # This uses the __str__ from the Node class
+            result += ", "
+        result += "]"
+        return result
