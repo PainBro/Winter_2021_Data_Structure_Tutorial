@@ -11,8 +11,7 @@ There are 3 examples of queues we will be covering in this tutorial; Grocery sto
 ### Grocery Store Queue
 This is probrably what most people think of with queues. The first item in the queue will be the first one to be used, just like a grocery store. The first person in line is the first person served. One iteme will be QUEUED at a time and one will be DEQUEUED.
 
-graph LR
-    Start --> Stop
+![](Grocery Queue,png)
 
 ### Web Server Queue
 this queue is similar to grocery store queue in that the first item QUEUED, will be the first item DEQUEUED. Unlike a grocery store queue, this web server queue uses an intermediary to decide which items to queue first. like with a phone line, if you call you will be connected, but if someone calls 911, their call will take priority.
