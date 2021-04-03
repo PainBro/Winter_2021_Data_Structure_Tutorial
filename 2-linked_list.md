@@ -97,8 +97,49 @@ def insert_tail(self, value):
 
 ## Example 2
 
+The code below shows a function to remove the first item in a linked list
+
+```python
+def remove_head(self):
+        """ 
+        Remove the first node (i.e. the head) of the linked list.
+        """
+        # If the list has only one item in it, then set head and tail 
+        # to None resulting in an empty list.
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        # If the list has more than one item in it, then only self.head
+        # will be affected.
+        elif self.head is not None:
+            self.head.next.prev = None  # Disconnect the second node from the first node
+            self.head = self.head.next  # Update the head to point to the second node
+```
 
 ## Problem 2
 
+Use the code above to help in making the code to remove the last item in the linked list. Call the new function remove_tail()
+Below is some test code to help you test your solution.
+```python
+ll.remove_tail()
+print(ll) # linkedlist[5, 4, 3, 2, 2, 1, 0]
+ll.remove_tail()
+print(ll) # linkedlist[5, 4, 3, 2, 2, 1]
+```
+
+Remember to use your code from problem 1
+
 ### Problem 2 Solution
 
+```python
+def remove_tail(self):
+        # If the list has only one item in it, then set head and tail 
+        # to None resulting in an empty list.
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+
+        elif self.tail is not None:
+            self.tail.prev.next = None  # Disconnect the second to last node from the last node
+            self.tail = self.tail.prev  # Update the tail to point to the second to last node
+```
